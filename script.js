@@ -63,36 +63,8 @@ window.addEventListener('scroll', () => {
             });
         });
         
-        // Slider de testimonios
-        const testimonialsContainer = document.querySelector('.testimonials-container');
-        const dots = document.querySelectorAll('.slider-dot');
-        let currentSlide = 0;
-        
-        function showSlide(index) {
-            testimonialsContainer.style.transform = `translateX(-${index * 100}%)`;
-            
-            // Actualizar dots activos
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[index].classList.add('active');
-            
-            currentSlide = index;
-        }
-        
-        // Agregar eventos a los dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-            });
-        });
-        
-        // Auto slide cada 5 segundos
-        setInterval(() => {
-            let nextSlide = (currentSlide + 1) % dots.length;
-            showSlide(nextSlide);
-        }, 5000);
-        
         // Animación de elementos al hacer scroll
-        const fadeElements = document.querySelectorAll('.service-card, .portfolio-item, .testimonial');
+        const fadeElements = document.querySelectorAll('.service-card, .portfolio-item');
         
         const fadeInOnScroll = () => {
             fadeElements.forEach(element => {
@@ -137,8 +109,7 @@ window.addEventListener('scroll', () => {
                 submitBtn.style.opacity = '1';
                 return;
             }
-            
-            // Parámetros que coinciden con el template
+        
             // El template usa: {{name}}, {{email}}, {{asunto}}, {{message}}
             const templateParams = {
                 name: nombre,
@@ -190,4 +161,5 @@ window.addEventListener('scroll', () => {
                 border: 0;
             }
         `;
+
         document.head.appendChild(style);
