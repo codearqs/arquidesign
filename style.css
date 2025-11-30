@@ -675,10 +675,11 @@
             }
             
             .portfolio-filter {
-                flex-wrap: wrap;
+                flex-direction: column;
             }
             
             .filter-btn {
                 margin-bottom: 10px;
             }
+
         }
