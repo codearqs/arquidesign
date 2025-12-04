@@ -77,6 +77,10 @@ window.addEventListener('scroll', () => {
             });
         };
 
+        window.addEventListener('scroll', fadeInOnScroll);
+        // Ejecutar una vez al cargar la página
+        fadeInOnScroll();
+
         // FORMULARIO DE CONTACTO CON EMAILJS
         const contactForm = document.getElementById('form-contacto');
 
@@ -159,4 +163,5 @@ window.addEventListener('scroll', () => {
         `;
 
         document.head.appendChild(style);
+
 
