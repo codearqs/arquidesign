@@ -30,6 +30,12 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+// HEADER CON SCROLL
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    header.classList.toggle('scrolled', window.scrollY > 100);
+});
+
         // FILTRO DE PORTAFOLIO
         const filterButtons = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -56,6 +62,20 @@ document.querySelectorAll('.nav-links a').forEach(link => {
                 });
             });
         }),
+
+        // Animación de elementos al hacer scroll
+        const fadeElements = document.querySelectorAll('.service-card, .portfolio-item');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        };
 
         // FORMULARIO DE CONTACTO CON EMAILJS
         const contactForm = document.getElementById('form-contacto');
@@ -139,3 +159,4 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         `;
 
         document.head.appendChild(style);
+
