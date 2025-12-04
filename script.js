@@ -61,25 +61,7 @@ window.addEventListener('scroll', () => {
                     }
                 });
             });
-        });
-        
-        // Animación de elementos al hacer scroll
-        const fadeElements = document.querySelectorAll('.service-card, .portfolio-item');
-        
-        const fadeInOnScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('fade-in');
-                }
-            });
-        };
-        
-        window.addEventListener('scroll', fadeInOnScroll);
-        // Ejecutar una vez al cargar la página
-        fadeInOnScroll();
+        }),
 
         // FORMULARIO DE CONTACTO CON EMAILJS
         const contactForm = document.getElementById('form-contacto');
@@ -163,3 +145,4 @@ window.addEventListener('scroll', () => {
         `;
 
         document.head.appendChild(style);
+
