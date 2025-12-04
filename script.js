@@ -109,7 +109,7 @@ window.addEventListener('scroll', () => {
                 submitBtn.style.opacity = '1';
                 return;
             }
-        
+            
             // El template usa: {{name}}, {{email}}, {{asunto}}, {{message}}
             const templateParams = {
                 name: nombre,
@@ -161,8 +161,4 @@ window.addEventListener('scroll', () => {
                 border: 0;
             }
         `;
-
         document.head.appendChild(style);
-
-
-
