@@ -30,12 +30,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// HEADER CON SCROLL
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    header.classList.toggle('scrolled', window.scrollY > 100);
-});
-
         // FILTRO DE PORTAFOLIO
         const filterButtons = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -145,4 +139,5 @@ window.addEventListener('scroll', () => {
         `;
 
         document.head.appendChild(style);
+
 
