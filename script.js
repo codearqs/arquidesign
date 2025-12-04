@@ -61,8 +61,8 @@ window.addEventListener('scroll', () => {
                     }
                 });
             });
-        }),
-
+        });
+        
         // Animación de elementos al hacer scroll
         const fadeElements = document.querySelectorAll('.service-card, .portfolio-item');
         
@@ -76,7 +76,7 @@ window.addEventListener('scroll', () => {
                 }
             });
         };
-
+        
         window.addEventListener('scroll', fadeInOnScroll);
         // Ejecutar una vez al cargar la página
         fadeInOnScroll();
@@ -163,5 +163,6 @@ window.addEventListener('scroll', () => {
         `;
 
         document.head.appendChild(style);
+
 
 
