@@ -62,6 +62,7 @@ window.addEventListener('scroll', () => {
                 });
             });
         });
+        
 
         // FORMULARIO DE CONTACTO CON EMAILJS
         const contactForm = document.getElementById('form-contacto');
