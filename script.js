@@ -62,24 +62,6 @@ window.addEventListener('scroll', () => {
                 });
             });
         });
-        
-        // Animación de elementos al hacer scroll
-        const fadeElements = document.querySelectorAll('.service-card, .portfolio-item');
-        
-        const fadeInOnScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('fade-in');
-                }
-            });
-        };
-        
-        window.addEventListener('scroll', fadeInOnScroll);
-        // Ejecutar una vez al cargar la página
-        fadeInOnScroll();
 
         // FORMULARIO DE CONTACTO CON EMAILJS
         const contactForm = document.getElementById('form-contacto');
@@ -145,20 +127,3 @@ window.addEventListener('scroll', () => {
                 submitBtn.style.opacity = '1';
             });
         });
-
-        // ESTILO PARA ACCESIBILIDAD
-        const style = document.createElement('style');
-        style.textContent = `
-            .sr-only {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                white-space: nowrap;
-                border: 0;
-            }
-        `;
-        document.head.appendChild(style);
