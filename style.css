@@ -2,7 +2,7 @@
         :root {
             --color-primary: #1a1a1a;
             --color-secondary: #ffffff;
-            --color-accent: #c19a6b; /* Dorado elegante */
+            --color-accent: #c19a6b; /* Dorado */
             --color-text: #333333;
             --color-text-light: #777777;
             --color-background: #f9f9f9;
@@ -683,3 +683,4 @@
             }
 
         }
+
